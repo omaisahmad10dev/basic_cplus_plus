@@ -29,6 +29,7 @@ int main(){
 			float & y=x;
 			cout<<x <<endl;
 			cout<<y<<endl;
+			cout<<y<<endl;
 
 	//******************typecasting***********************
 	
