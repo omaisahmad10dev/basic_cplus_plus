@@ -26,10 +26,11 @@ int main(){
 	//*************reference variable************************
 	// for example (Reference variable is an alias, directly modifying the original variable.)
 			float x=456;
+			float c=12;
 			float & y=x;
 			cout<<x <<endl;
 			cout<<y<<endl;
-			cout<<y<<endl;
+			
 
 	//******************typecasting***********************
 	
