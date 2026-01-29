@@ -1,70 +1,38 @@
 #include<iostream>
 using namespace std;
+
 class student{
     string name;
     int rollnumber;
-    
-  int mathsmarks;
-  int physicsmarks;
-   
-    int totalMarks;
+    int mathsmarks;
+    int physicsmarks;
+    int totalmarks;
     float percentage;
 
-    public:
-         student() {
-        name = "";
-        rollnumber = 0;
-        mathsmarks = 0;
-        physicsmarks = 0;
-        totalMarks=0;   
-        percentage = 0.0;
+public:
+    // Parameterized Constructor
+    student(string n, int r, int m, int p){
+        name = n;
+        rollnumber = r;
+        mathsmarks = m;
+        physicsmarks = p;
+
+        totalmarks = mathsmarks + physicsmarks;
+        percentage = (totalmarks / 200.0) * 100;
     }
-            void setbasicinfo(string n, int r){
 
-                name=n;
-                rollnumber=r;
-            }
-
-            void setsubjectinfo(int mMarks, int  pMarks){
-             mathsmarks=mMarks;
-                physicsmarks=pMarks;
-            }
-
-            
-             void calculateTotal(){
-              totalMarks =mathsmarks+physicsmarks;
-            }
-            void calculatepercentage(){
-               
-                percentage=(totalMarks/200.0)*100;
-            }
-
-           
-
-            void display() {
-    cout << "Name: " << name << endl;
-    cout << "Roll Number: " << rollnumber << endl;
-    cout << "mathsMarks: " << mathsmarks << endl;
-    cout << "physicsMarks: " << physicsmarks << endl;
-    cout<<"total Marks "<<totalMarks<<endl;
-    cout << "Percentage: " << percentage << "%" << endl;
-}
-
-            
-    
-
+    void display(){
+        cout << "Name: " << name << endl;
+        cout << "Roll Number: " << rollnumber << endl;
+        cout << "Maths Marks: " << mathsmarks << endl;
+        cout << "Physics Marks: " << physicsmarks << endl;
+        cout << "Total Marks: " << totalmarks << endl;
+        cout << "Percentage: " << percentage << "%" << endl;
+    }
 };
+
 int main(){
-    student s1;
-    s1.setbasicinfo("omais",102);
-    s1.setsubjectinfo(70,72);
-    s1.calculateTotal();
-    s1.calculatepercentage();
-
-    
-
+    student s1("Omais Ahmad", 24233, 34, 45);
     s1.display();
-
-
-return 0;
+    return 0;
 }
