@@ -1,1 +1,1 @@
-cout<<"The value of a is"<<(float) a<<endl;
+;
