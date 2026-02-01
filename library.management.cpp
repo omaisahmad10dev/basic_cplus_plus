@@ -28,20 +28,23 @@ int main(){
         cin>>input;
     
         switch(input){
-
+            
             case 1:
         start:
             cout<<"Enter book id"<<endl;
             cin>>lib[count].id;
+           
 
             cout<<"Enter book Name"<<endl;
-            cin>>lib[count].name;
+            // cin>>lib[count].name;
+            cin.getline(lib[count].name,100,'$');
 
             cout<<"Enter book author"<<endl;
-            cin>>lib[count].author;
+            cin.getline(lib[count].author,100,'$');
 
             cout<<"Enter student Name"<<endl;
-            cin>>lib[count].student;
+            // cin>>lib[count].student;
+            cin.getline(lib[count].student,100,'$');
 
             cout<<"Enter book price"<<endl;
             cin>>lib[count].price;
@@ -57,9 +60,9 @@ int main(){
                 int i;
                 for(i=0;i<count;i++){
                     cout<<"Book id:"<<lib[i].id<<endl;
-                    cout<<"Book name:"<<lib[i].name<<endl;
-                    cout<<"Book author:"<<lib[i].author<<endl;
-                    cout<<"student name:"<<lib[i].student<<endl;
+                    cout<<"Book name:"<<lib[i].name;
+                    cout<<"Book author:"<<lib[i].author;
+                    cout<<"student name:"<<lib[i].student;
                     cout<<"Book price:"<<lib[i].price<<endl;
                     cout<<"Book pages:"<<lib[i].pages<<endl;
                   
