@@ -21,7 +21,7 @@ class bankDeposit{
     interestRate=r;
     returnValue=principle;
 
-    for(int i=0; i<y; i++){
+    for(int i=2; i<y; i++){
          returnValue=returnValue*(1+interestRate);
     }
 
@@ -57,6 +57,8 @@ int main(){
 
     cout<<"Enter the value of p, y and r "<<endl;
 
+   
+
     cin>>p>>y>>r;
     bd1=bankDeposit(p,y,r);
     bd1.showData();
@@ -67,6 +69,8 @@ int main(){
     cin>>p>>y>>R;
     bd2=bankDeposit(p,y,R);
     bd2.showData();
+
+    
 
 return 0;
 }
