@@ -13,7 +13,7 @@ class employee{
     }
     employee(){}
 };
-
+// clild class
 class programing:public employee{
     public:
     int languagecode;
@@ -30,15 +30,16 @@ class programing:public employee{
 };
 
 int main(){
-    employee omais(1),waseem(2);
+    // objict
+    employee ali(1),ahmad(2);
     
-    cout<<omais.salary<<endl;
-    cout<<waseem.salary<<endl;
-    programing haseeb(100);
-    cout<<haseeb.languagecode<<endl;
-    haseeb.getdata();
-    cout<<haseeb.id<<endl;
-    cout<<haseeb.salary<<endl;
+    cout<<ali.salary<<endl;
+    cout<<ahmad.salary<<endl;
+    programing khan(100);
+    cout<<khan.languagecode<<endl;
+    khan.getdata();
+    cout<<khan.id<<endl;
+    cout<<khan.salary<<endl;
 
 
 return 0;
