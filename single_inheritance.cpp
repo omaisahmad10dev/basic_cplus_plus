@@ -1,48 +1,41 @@
 #include<iostream>
 using namespace std;
 class marks{
-        int Obtained;
+    int obtained;
     public:
-        int Total;
-        void setdata();
-        float getObtained();
-        float gettotal();
+    int total;
+   int setdata();
+   float getobtained();
+   float gettotal();
 };
-
-void marks::setdata(void){
-    Obtained=978;
-    Total=1200;
-    
+int marks::setdata(void){
+    obtained=978;
+    total=1200;
 }
-float marks::getObtained(){
-    return Obtained;
+float marks::getobtained(){
+    return obtained;
 }
-
 float marks::gettotal(){
-    return Total;
+    return total;
 }
-
-
 
 class percentage:public marks{
     float percent;
-        public:
-        void calculate();
-        void display();
-        
+    public:
+    void calculate();
+    void display();
 };
 void percentage::calculate(){
-    percent = (getObtained()/gettotal())*100;
-
+    percent=(getobtained()/gettotal())*100;
 }
 void percentage::display(){
-         cout<<"obtained marks is :"<<getObtained()<<endl;
-        cout<<"Total marks is :"<<gettotal()<<endl;
-       
-        cout<<"percentage is :"<<percent<<"%"<<endl;
-}
+    cout<<"obtained marks is:"<<getobtained()<<endl;
+    cout<<"total marks is:"<<gettotal()<<endl;
 
+    cout<<"percentage is:"<<percent<<"%"<<endl;
+}
 int main(){
+    //object
     percentage a;
     a.setdata();
     a.calculate();

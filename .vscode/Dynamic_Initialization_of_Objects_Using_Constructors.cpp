@@ -12,7 +12,7 @@ class bankDeposit{
     bankDeposit(){}
     bankDeposit(int p, int y, float r); // r can be value llike 0.03 decemil form
     bankDeposit(int p, int y, int r); //r can be value like 12 percentage
-   void showData();
+    void showData();
 };
 
     bankDeposit::bankDeposit(int p, int y, float r){
@@ -21,7 +21,7 @@ class bankDeposit{
     interestRate=r;
     returnValue=principle;
 
-    for(int i=2; i<y; i++){
+    for(int i=0; i<y; i++){
          returnValue=returnValue*(1+interestRate);
     }
 
